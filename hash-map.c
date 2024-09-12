@@ -99,6 +99,8 @@ void delete_ (Hashmap *map, char *key){
     
 /* Xin lỗi nhé, Amanai. Hiện tại không phải tôi đang tức giận vì cô hay gì đâu. Tôi cũng chả hận bất cứ ai cả. Chỉ là hiện giờ tôi cảm thấy... Thế giới hiện đang rất, rất dễ chịu. "Thiên thượng thiên hạ, duy ngã độc tôn".*/
 
+/*vcl :))))))))))))))))))))))))))))))?*/
+
 void freeAll(Hashmap *map){
     for (size_t i = 0; i < TABLE_SIZE; i++){
         Entry *entry = map->table[i];
