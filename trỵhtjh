@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+#define pi 3.14
+int main(){
+	
+	float a, b;	
+	float rad;
+	float rad_real;
+	
+	scanf("%f %f %f", &a, &b, &rad);
+    
+	rad_real = rad * pi / 180;
+	
+	printf("dien tich la %f", (a * b * sin(rad_real))*1/2);
+	
+	return 0;
+}
