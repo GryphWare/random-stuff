@@ -86,6 +86,20 @@ float getPrice (hashmap *map, char* food){
     }
     return -1;
 }
+
+void freehashmap(hashmap *map){
+    for(size_t i = 0; i < hash_table; i++){
+        entry *Entry_delete = map->table[i];
+        
+        while(Entry_delete){
+            entry *temp = Entry_delete;
+            Entry_delete = Entry_delete->Next;
+            free(temp->Next);
+            free(temp);
+        }
+    }
+}
+
 int main(){
     
     hashmap map;
@@ -119,6 +133,8 @@ int main(){
     }
     
     printf("total: %f", total);
+
+    freehashmap(&map);
     
     return 0;
 }
